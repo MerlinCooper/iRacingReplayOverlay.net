@@ -61,7 +61,9 @@ namespace iRacingReplayDirector.Phases
 
             var scenicCameras = camera.GroupNum;
             var aCar = data.SessionData.DriverInfo.CompetingDrivers[1].CarNumberRaw;
-            iRacing.Replay.CameraOnDriver((short)aCar, (short)scenicCameras);
+            //Don't use Methode from iRacing SDK - instead use methode from cameracontrol
+            ReplayControl.cameraControl.CameraOnDriver((short)aCar, (short)scenicCameras);
+            //iRacing.Replay.CameraOnDriver((short)aCar, (short)scenicCameras);
 
             //var videoCapture = new VideoCapture();
 

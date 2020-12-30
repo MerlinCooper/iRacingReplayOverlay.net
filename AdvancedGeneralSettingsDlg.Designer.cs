@@ -1,6 +1,6 @@
 ﻿namespace iRacingReplayDirector
 {
-    partial class AdvanceGeneralSettingsDlg
+    partial class AdvancedGeneralSettingsDlg
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,24 @@
         {
             this.incidents_settings_tab = new System.Windows.Forms.TabControl();
             this.tabPageTiming = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.durationHighlight = new System.Windows.Forms.MaskedTextBox();
-            this.timeToFocusLeaderRaceFinish = new System.Windows.Forms.MaskedTextBox();
-            this.timeToFocusLeaderRaceStart = new System.Windows.Forms.MaskedTextBox();
-            this.battleSwitchTimeInput = new System.Windows.Forms.MaskedTextBox();
-            this.cameraSwitchTimeInput = new System.Windows.Forms.MaskedTextBox();
+            this.grpBox_Timing_Settings = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbHighlightVideoTargetDuration = new System.Windows.Forms.MaskedTextBox();
+            this.tbFollowLeaderBeforeRaceEndPeriod = new System.Windows.Forms.MaskedTextBox();
+            this.tbBattleGap = new System.Windows.Forms.MaskedTextBox();
+            this.tbFollowLeaderAtRaceStartPeriod = new System.Windows.Forms.MaskedTextBox();
+            this.tbBattleStickyPeriod = new System.Windows.Forms.MaskedTextBox();
+            this.tbCameraStickyPeriod = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,7 +60,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbDescriptionIncidentsTab = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.checkBoxIgnoreCarsInPitsDuringStart = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -63,9 +73,11 @@
             this.checkBox_PerferedDriversOnly = new System.Windows.Forms.CheckBox();
             this.ok_button = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbDescriptionDriversTab = new System.Windows.Forms.TextBox();
             this.incidents_settings_tab.SuspendLayout();
             this.tabPageTiming.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grpBox_Timing_Settings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPageIncidents.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -74,6 +86,7 @@
             this.tabPageDrivers.SuspendLayout();
             this.groupBox_Drivers.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // incidents_settings_tab
@@ -85,100 +98,204 @@
             this.incidents_settings_tab.Margin = new System.Windows.Forms.Padding(4);
             this.incidents_settings_tab.Name = "incidents_settings_tab";
             this.incidents_settings_tab.SelectedIndex = 0;
-            this.incidents_settings_tab.Size = new System.Drawing.Size(520, 564);
+            this.incidents_settings_tab.Size = new System.Drawing.Size(586, 573);
             this.incidents_settings_tab.TabIndex = 0;
             // 
             // tabPageTiming
             // 
-            this.tabPageTiming.Controls.Add(this.groupBox1);
+            this.tabPageTiming.Controls.Add(this.grpBox_Timing_Settings);
             this.tabPageTiming.Controls.Add(this.groupBox2);
             this.tabPageTiming.Location = new System.Drawing.Point(4, 28);
             this.tabPageTiming.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageTiming.Name = "tabPageTiming";
             this.tabPageTiming.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageTiming.Size = new System.Drawing.Size(512, 532);
+            this.tabPageTiming.Size = new System.Drawing.Size(578, 541);
             this.tabPageTiming.TabIndex = 0;
             this.tabPageTiming.Text = "Timing";
             this.tabPageTiming.UseVisualStyleBackColor = true;
+            this.tabPageTiming.Click += new System.EventHandler(this.tabPageTiming_Click);
             // 
-            // groupBox1
+            // grpBox_Timing_Settings
             // 
-            this.groupBox1.Controls.Add(this.durationHighlight);
-            this.groupBox1.Controls.Add(this.timeToFocusLeaderRaceFinish);
-            this.groupBox1.Controls.Add(this.timeToFocusLeaderRaceStart);
-            this.groupBox1.Controls.Add(this.battleSwitchTimeInput);
-            this.groupBox1.Controls.Add(this.cameraSwitchTimeInput);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(21, 19);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(480, 246);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Settings";
+            this.grpBox_Timing_Settings.Controls.Add(this.label14);
+            this.grpBox_Timing_Settings.Controls.Add(this.label13);
+            this.grpBox_Timing_Settings.Controls.Add(this.label16);
+            this.grpBox_Timing_Settings.Controls.Add(this.label15);
+            this.grpBox_Timing_Settings.Controls.Add(this.label12);
+            this.grpBox_Timing_Settings.Controls.Add(this.label11);
+            this.grpBox_Timing_Settings.Controls.Add(this.label9);
+            this.grpBox_Timing_Settings.Controls.Add(this.label8);
+            this.grpBox_Timing_Settings.Controls.Add(this.tbHighlightVideoTargetDuration);
+            this.grpBox_Timing_Settings.Controls.Add(this.tbFollowLeaderBeforeRaceEndPeriod);
+            this.grpBox_Timing_Settings.Controls.Add(this.tbBattleGap);
+            this.grpBox_Timing_Settings.Controls.Add(this.tbFollowLeaderAtRaceStartPeriod);
+            this.grpBox_Timing_Settings.Controls.Add(this.tbBattleStickyPeriod);
+            this.grpBox_Timing_Settings.Controls.Add(this.tbCameraStickyPeriod);
+            this.grpBox_Timing_Settings.Controls.Add(this.label5);
+            this.grpBox_Timing_Settings.Controls.Add(this.label4);
+            this.grpBox_Timing_Settings.Controls.Add(this.label10);
+            this.grpBox_Timing_Settings.Controls.Add(this.label3);
+            this.grpBox_Timing_Settings.Controls.Add(this.label2);
+            this.grpBox_Timing_Settings.Controls.Add(this.label1);
+            this.grpBox_Timing_Settings.Location = new System.Drawing.Point(21, 19);
+            this.grpBox_Timing_Settings.Margin = new System.Windows.Forms.Padding(4);
+            this.grpBox_Timing_Settings.Name = "grpBox_Timing_Settings";
+            this.grpBox_Timing_Settings.Padding = new System.Windows.Forms.Padding(4);
+            this.grpBox_Timing_Settings.Size = new System.Drawing.Size(532, 285);
+            this.grpBox_Timing_Settings.TabIndex = 5;
+            this.grpBox_Timing_Settings.TabStop = false;
+            this.grpBox_Timing_Settings.Text = "Settings";
             // 
-            // durationHighlight
+            // label14
             // 
-            this.durationHighlight.Location = new System.Drawing.Point(309, 175);
-            this.durationHighlight.Margin = new System.Windows.Forms.Padding(4);
-            this.durationHighlight.Mask = "000.0 sec";
-            this.durationHighlight.Name = "durationHighlight";
-            this.durationHighlight.Size = new System.Drawing.Size(132, 27);
-            this.durationHighlight.TabIndex = 3;
-            this.durationHighlight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(449, 184);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(77, 19);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "HH:MM:SS";
             // 
-            // timeToFocusLeaderRaceFinish
+            // label13
             // 
-            this.timeToFocusLeaderRaceFinish.Location = new System.Drawing.Point(309, 137);
-            this.timeToFocusLeaderRaceFinish.Margin = new System.Windows.Forms.Padding(4);
-            this.timeToFocusLeaderRaceFinish.Mask = "000.0 sec";
-            this.timeToFocusLeaderRaceFinish.Name = "timeToFocusLeaderRaceFinish";
-            this.timeToFocusLeaderRaceFinish.Size = new System.Drawing.Size(132, 27);
-            this.timeToFocusLeaderRaceFinish.TabIndex = 3;
-            this.timeToFocusLeaderRaceFinish.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(449, 222);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 19);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "HH:MM:SS";
             // 
-            // timeToFocusLeaderRaceStart
+            // label16
             // 
-            this.timeToFocusLeaderRaceStart.Location = new System.Drawing.Point(309, 99);
-            this.timeToFocusLeaderRaceStart.Margin = new System.Windows.Forms.Padding(4);
-            this.timeToFocusLeaderRaceStart.Mask = "000.0 sec";
-            this.timeToFocusLeaderRaceStart.Name = "timeToFocusLeaderRaceStart";
-            this.timeToFocusLeaderRaceStart.Size = new System.Drawing.Size(132, 27);
-            this.timeToFocusLeaderRaceStart.TabIndex = 3;
-            this.timeToFocusLeaderRaceStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(449, 146);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(77, 19);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "HH:MM:SS";
             // 
-            // battleSwitchTimeInput
+            // label15
             // 
-            this.battleSwitchTimeInput.Location = new System.Drawing.Point(309, 61);
-            this.battleSwitchTimeInput.Margin = new System.Windows.Forms.Padding(4);
-            this.battleSwitchTimeInput.Mask = "000.0 sec";
-            this.battleSwitchTimeInput.Name = "battleSwitchTimeInput";
-            this.battleSwitchTimeInput.Size = new System.Drawing.Size(132, 27);
-            this.battleSwitchTimeInput.TabIndex = 3;
-            this.battleSwitchTimeInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(455, 146);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(77, 19);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "HH:MM:SS";
             // 
-            // cameraSwitchTimeInput
+            // label12
             // 
-            this.cameraSwitchTimeInput.Location = new System.Drawing.Point(309, 23);
-            this.cameraSwitchTimeInput.Margin = new System.Windows.Forms.Padding(4);
-            this.cameraSwitchTimeInput.Mask = "000.0 sec";
-            this.cameraSwitchTimeInput.Name = "cameraSwitchTimeInput";
-            this.cameraSwitchTimeInput.Size = new System.Drawing.Size(132, 27);
-            this.cameraSwitchTimeInput.TabIndex = 3;
-            this.cameraSwitchTimeInput.Tag = "45.0";
-            this.cameraSwitchTimeInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.cameraSwitchTimeInput.Enter += new System.EventHandler(this.cameraSwitchTimeInput_Enter);
-            this.cameraSwitchTimeInput.MouseHover += new System.EventHandler(this.cameraSwitchTimeInput_MouseHover);
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(449, 104);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 19);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "HH:MM:SS";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(449, 109);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 19);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "HH:MM:SS";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(449, 64);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 19);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "HH:MM:SS";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(449, 26);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 19);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "HH:MM:SS";
+            // 
+            // tbHighlightVideoTargetDuration
+            // 
+            this.tbHighlightVideoTargetDuration.Location = new System.Drawing.Point(309, 219);
+            this.tbHighlightVideoTargetDuration.Margin = new System.Windows.Forms.Padding(4);
+            this.tbHighlightVideoTargetDuration.Mask = "00:00:00";
+            this.tbHighlightVideoTargetDuration.Name = "tbHighlightVideoTargetDuration";
+            this.tbHighlightVideoTargetDuration.Size = new System.Drawing.Size(132, 27);
+            this.tbHighlightVideoTargetDuration.TabIndex = 3;
+            this.tbHighlightVideoTargetDuration.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbFollowLeaderBeforeRaceEndPeriod
+            // 
+            this.tbFollowLeaderBeforeRaceEndPeriod.Location = new System.Drawing.Point(309, 181);
+            this.tbFollowLeaderBeforeRaceEndPeriod.Margin = new System.Windows.Forms.Padding(4);
+            this.tbFollowLeaderBeforeRaceEndPeriod.Mask = "00:00:00";
+            this.tbFollowLeaderBeforeRaceEndPeriod.Name = "tbFollowLeaderBeforeRaceEndPeriod";
+            this.tbFollowLeaderBeforeRaceEndPeriod.Size = new System.Drawing.Size(132, 27);
+            this.tbFollowLeaderBeforeRaceEndPeriod.TabIndex = 3;
+            this.tbFollowLeaderBeforeRaceEndPeriod.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbBattleGap
+            // 
+            this.tbBattleGap.Location = new System.Drawing.Point(309, 101);
+            this.tbBattleGap.Margin = new System.Windows.Forms.Padding(4);
+            this.tbBattleGap.Mask = "00:00:00";
+            this.tbBattleGap.Name = "tbBattleGap";
+            this.tbBattleGap.Size = new System.Drawing.Size(132, 27);
+            this.tbBattleGap.TabIndex = 3;
+            this.tbBattleGap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbBattleGap.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.tbBattleGap_MaskInputRejected);
+            // 
+            // tbFollowLeaderAtRaceStartPeriod
+            // 
+            this.tbFollowLeaderAtRaceStartPeriod.Location = new System.Drawing.Point(309, 143);
+            this.tbFollowLeaderAtRaceStartPeriod.Margin = new System.Windows.Forms.Padding(4);
+            this.tbFollowLeaderAtRaceStartPeriod.Mask = "00:00:00";
+            this.tbFollowLeaderAtRaceStartPeriod.Name = "tbFollowLeaderAtRaceStartPeriod";
+            this.tbFollowLeaderAtRaceStartPeriod.Size = new System.Drawing.Size(132, 27);
+            this.tbFollowLeaderAtRaceStartPeriod.TabIndex = 3;
+            this.tbFollowLeaderAtRaceStartPeriod.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbBattleStickyPeriod
+            // 
+            this.tbBattleStickyPeriod.Location = new System.Drawing.Point(309, 61);
+            this.tbBattleStickyPeriod.Margin = new System.Windows.Forms.Padding(4);
+            this.tbBattleStickyPeriod.Mask = "00:00:00";
+            this.tbBattleStickyPeriod.Name = "tbBattleStickyPeriod";
+            this.tbBattleStickyPeriod.Size = new System.Drawing.Size(132, 27);
+            this.tbBattleStickyPeriod.TabIndex = 3;
+            this.tbBattleStickyPeriod.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbBattleStickyPeriod.MouseLeave += new System.EventHandler(this.tbBattleStickyPeriod_MouseLeave);
+            this.tbBattleStickyPeriod.MouseHover += new System.EventHandler(this.tbBattleStickyPeriod_MouseHover);
+            // 
+            // tbCameraStickyPeriod
+            // 
+            this.tbCameraStickyPeriod.Location = new System.Drawing.Point(309, 23);
+            this.tbCameraStickyPeriod.Margin = new System.Windows.Forms.Padding(4);
+            this.tbCameraStickyPeriod.Mask = "00:00:00";
+            this.tbCameraStickyPeriod.Name = "tbCameraStickyPeriod";
+            this.tbCameraStickyPeriod.Size = new System.Drawing.Size(132, 27);
+            this.tbCameraStickyPeriod.TabIndex = 3;
+            this.tbCameraStickyPeriod.Tag = "45.0";
+            this.tbCameraStickyPeriod.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbCameraStickyPeriod.MouseLeave += new System.EventHandler(this.tbCameraStickyPeriod_MouseLeave);
+            this.tbCameraStickyPeriod.MouseHover += new System.EventHandler(this.tbCameraStickyPeriod_MouseHover);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 186);
+            this.label5.Location = new System.Drawing.Point(11, 230);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(186, 19);
@@ -189,7 +306,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 146);
+            this.label4.Location = new System.Drawing.Point(11, 190);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(211, 19);
@@ -197,10 +314,21 @@
             this.label4.Text = "Time to track leader on last lap";
             this.label4.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(11, 109);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(228, 19);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Time gap between cars for battle:";
+            this.label10.Click += new System.EventHandler(this.label1_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 107);
+            this.label3.Location = new System.Drawing.Point(11, 151);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(222, 19);
@@ -237,7 +365,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(480, 164);
+            this.groupBox2.Size = new System.Drawing.Size(532, 164);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Description of Setting";
@@ -245,11 +373,11 @@
             // 
             // textBoxSettingDescription
             // 
-            this.textBoxSettingDescription.Location = new System.Drawing.Point(15, 29);
+            this.textBoxSettingDescription.Location = new System.Drawing.Point(12, 29);
             this.textBoxSettingDescription.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSettingDescription.Multiline = true;
             this.textBoxSettingDescription.Name = "textBoxSettingDescription";
-            this.textBoxSettingDescription.Size = new System.Drawing.Size(456, 124);
+            this.textBoxSettingDescription.Size = new System.Drawing.Size(509, 124);
             this.textBoxSettingDescription.TabIndex = 0;
             this.textBoxSettingDescription.TextChanged += new System.EventHandler(this.textBoxSettingDescription_TextChanged);
             // 
@@ -262,7 +390,7 @@
             this.tabPageIncidents.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageIncidents.Name = "tabPageIncidents";
             this.tabPageIncidents.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageIncidents.Size = new System.Drawing.Size(512, 532);
+            this.tabPageIncidents.Size = new System.Drawing.Size(578, 541);
             this.tabPageIncidents.TabIndex = 1;
             this.tabPageIncidents.Text = "Incidents";
             this.tabPageIncidents.UseVisualStyleBackColor = true;
@@ -275,14 +403,14 @@
             this.groupBox5.Controls.Add(this.label6);
             this.groupBox5.Location = new System.Drawing.Point(15, 156);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(480, 119);
+            this.groupBox5.Size = new System.Drawing.Size(536, 119);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Incident Parameters";
             // 
             // input_IgnoreIncidentBelow
             // 
-            this.input_IgnoreIncidentBelow.Location = new System.Drawing.Point(339, 61);
+            this.input_IgnoreIncidentBelow.Location = new System.Drawing.Point(388, 63);
             this.input_IgnoreIncidentBelow.Margin = new System.Windows.Forms.Padding(4);
             this.input_IgnoreIncidentBelow.Mask = "000";
             this.input_IgnoreIncidentBelow.Name = "input_IgnoreIncidentBelow";
@@ -294,7 +422,7 @@
             // 
             // input_IncidentScanWait
             // 
-            this.input_IncidentScanWait.Location = new System.Drawing.Point(339, 27);
+            this.input_IncidentScanWait.Location = new System.Drawing.Point(388, 29);
             this.input_IncidentScanWait.Margin = new System.Windows.Forms.Padding(4);
             this.input_IncidentScanWait.Mask = "000";
             this.input_IncidentScanWait.Name = "input_IncidentScanWait";
@@ -327,24 +455,24 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.tbDescriptionIncidentsTab);
             this.groupBox4.Location = new System.Drawing.Point(15, 301);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(480, 164);
+            this.groupBox4.Size = new System.Drawing.Size(536, 164);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Description of Setting";
             // 
-            // textBox1
+            // tbDescriptionIncidentsTab
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 29);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(456, 124);
-            this.textBox1.TabIndex = 0;
+            this.tbDescriptionIncidentsTab.Location = new System.Drawing.Point(15, 29);
+            this.tbDescriptionIncidentsTab.Margin = new System.Windows.Forms.Padding(4);
+            this.tbDescriptionIncidentsTab.Multiline = true;
+            this.tbDescriptionIncidentsTab.Name = "tbDescriptionIncidentsTab";
+            this.tbDescriptionIncidentsTab.Size = new System.Drawing.Size(505, 124);
+            this.tbDescriptionIncidentsTab.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -353,7 +481,7 @@
             this.groupBox3.Controls.Add(this.checkBox_IgnoreIncidentsCapture);
             this.groupBox3.Location = new System.Drawing.Point(15, 21);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(480, 119);
+            this.groupBox3.Size = new System.Drawing.Size(536, 119);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "General Incidents Settings";
@@ -394,13 +522,14 @@
             // 
             // tabPageDrivers
             // 
+            this.tabPageDrivers.Controls.Add(this.groupBox1);
             this.tabPageDrivers.Controls.Add(this.groupBox_Drivers);
             this.tabPageDrivers.Controls.Add(this.groupBox6);
             this.tabPageDrivers.Location = new System.Drawing.Point(4, 28);
             this.tabPageDrivers.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageDrivers.Name = "tabPageDrivers";
             this.tabPageDrivers.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageDrivers.Size = new System.Drawing.Size(512, 532);
+            this.tabPageDrivers.Size = new System.Drawing.Size(578, 541);
             this.tabPageDrivers.TabIndex = 2;
             this.tabPageDrivers.Text = "Drivers";
             this.tabPageDrivers.UseVisualStyleBackColor = true;
@@ -410,9 +539,9 @@
             this.groupBox_Drivers.Controls.Add(this.listBox_PreferedDriverNames);
             this.groupBox_Drivers.Controls.Add(this.checkedListBox1);
             this.groupBox_Drivers.Enabled = false;
-            this.groupBox_Drivers.Location = new System.Drawing.Point(7, 116);
+            this.groupBox_Drivers.Location = new System.Drawing.Point(7, 103);
             this.groupBox_Drivers.Name = "groupBox_Drivers";
-            this.groupBox_Drivers.Size = new System.Drawing.Size(480, 390);
+            this.groupBox_Drivers.Size = new System.Drawing.Size(546, 258);
             this.groupBox_Drivers.TabIndex = 1;
             this.groupBox_Drivers.TabStop = false;
             this.groupBox_Drivers.Text = "Drivers";
@@ -423,7 +552,7 @@
             this.listBox_PreferedDriverNames.ItemHeight = 19;
             this.listBox_PreferedDriverNames.Location = new System.Drawing.Point(15, 154);
             this.listBox_PreferedDriverNames.Name = "listBox_PreferedDriverNames";
-            this.listBox_PreferedDriverNames.Size = new System.Drawing.Size(422, 80);
+            this.listBox_PreferedDriverNames.Size = new System.Drawing.Size(511, 80);
             this.listBox_PreferedDriverNames.TabIndex = 1;
             // 
             // checkedListBox1
@@ -431,7 +560,7 @@
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(15, 44);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(422, 92);
+            this.checkedListBox1.Size = new System.Drawing.Size(511, 92);
             this.checkedListBox1.TabIndex = 0;
             // 
             // groupBox6
@@ -439,7 +568,7 @@
             this.groupBox6.Controls.Add(this.checkBox_PerferedDriversOnly);
             this.groupBox6.Location = new System.Drawing.Point(7, 18);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(480, 79);
+            this.groupBox6.Size = new System.Drawing.Size(546, 79);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "General";
@@ -457,46 +586,68 @@
             // 
             // ok_button
             // 
-            this.ok_button.Location = new System.Drawing.Point(573, 50);
+            this.ok_button.Location = new System.Drawing.Point(626, 46);
             this.ok_button.Margin = new System.Windows.Forms.Padding(4);
             this.ok_button.Name = "ok_button";
             this.ok_button.Size = new System.Drawing.Size(137, 45);
             this.ok_button.TabIndex = 1;
             this.ok_button.Text = "OK";
             this.ok_button.UseVisualStyleBackColor = true;
-            this.ok_button.Click += new System.EventHandler(this.button1_Click);
+            this.ok_button.Click += new System.EventHandler(this.ok_button_Click);
             // 
             // cancel_button
             // 
-            this.cancel_button.Location = new System.Drawing.Point(573, 114);
+            this.cancel_button.Enabled = false;
+            this.cancel_button.Location = new System.Drawing.Point(626, 110);
             this.cancel_button.Margin = new System.Windows.Forms.Padding(4);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(137, 45);
             this.cancel_button.TabIndex = 1;
             this.cancel_button.Text = "Cancel";
             this.cancel_button.UseVisualStyleBackColor = true;
-            this.cancel_button.Click += new System.EventHandler(this.button1_Click);
+            this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
             // 
-            // AdvanceGeneralSettingsDlg
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tbDescriptionDriversTab);
+            this.groupBox1.Location = new System.Drawing.Point(8, 368);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(545, 164);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Description of Setting";
+            // 
+            // tbDescriptionDriversTab
+            // 
+            this.tbDescriptionDriversTab.Location = new System.Drawing.Point(12, 29);
+            this.tbDescriptionDriversTab.Margin = new System.Windows.Forms.Padding(4);
+            this.tbDescriptionDriversTab.Multiline = true;
+            this.tbDescriptionDriversTab.Name = "tbDescriptionDriversTab";
+            this.tbDescriptionDriversTab.Size = new System.Drawing.Size(509, 124);
+            this.tbDescriptionDriversTab.TabIndex = 0;
+            // 
+            // AdvancedGeneralSettingsDlg
             // 
             this.AccessibleDescription = "General_Settings_Dialog";
             this.AccessibleName = "GeneralSettingsDlg";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(755, 615);
+            this.ClientSize = new System.Drawing.Size(792, 615);
             this.Controls.Add(this.cancel_button);
             this.Controls.Add(this.ok_button);
             this.Controls.Add(this.incidents_settings_tab);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "AdvanceGeneralSettingsDlg";
+            this.Name = "AdvancedGeneralSettingsDlg";
             this.Text = "Configure General Settings";
             this.Load += new System.EventHandler(this.AdvanceGeneralSettingsDlg_Load);
             this.incidents_settings_tab.ResumeLayout(false);
             this.tabPageTiming.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpBox_Timing_Settings.ResumeLayout(false);
+            this.grpBox_Timing_Settings.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPageIncidents.ResumeLayout(false);
@@ -510,6 +661,8 @@
             this.groupBox_Drivers.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -526,17 +679,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox durationHighlight;
-        private System.Windows.Forms.MaskedTextBox timeToFocusLeaderRaceFinish;
-        private System.Windows.Forms.MaskedTextBox timeToFocusLeaderRaceStart;
-        private System.Windows.Forms.MaskedTextBox battleSwitchTimeInput;
-        private System.Windows.Forms.MaskedTextBox cameraSwitchTimeInput;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.MaskedTextBox tbHighlightVideoTargetDuration;
+        private System.Windows.Forms.MaskedTextBox tbFollowLeaderBeforeRaceEndPeriod;
+        private System.Windows.Forms.MaskedTextBox tbFollowLeaderAtRaceStartPeriod;
+        private System.Windows.Forms.MaskedTextBox tbBattleStickyPeriod;
+        private System.Windows.Forms.MaskedTextBox tbCameraStickyPeriod;
+        private System.Windows.Forms.GroupBox grpBox_Timing_Settings;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TabPage tabPageDrivers;
         private System.Windows.Forms.TextBox textBoxSettingDescription;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbDescriptionIncidentsTab;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox checkBoxIgnoreCarsInPitsDuringStart;
         private System.Windows.Forms.CheckBox checkBox1;
@@ -551,5 +704,17 @@
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.CheckBox checkBox_PerferedDriversOnly;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MaskedTextBox tbBattleGap;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox tbDescriptionDriversTab;
     }
 }

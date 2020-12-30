@@ -84,6 +84,7 @@ namespace iRacingReplayDirector
             this.changeVersionButton = new System.Windows.Forms.Button();
             this.configurePluginsButton = new System.Windows.Forms.Button();
             this.newVersionMessage = new System.Windows.Forms.Label();
+            this.cb_UseNewSettingsDlg = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabCapture.SuspendLayout();
             this.tabTranscoding.SuspendLayout();
@@ -186,9 +187,9 @@ namespace iRacingReplayDirector
             this.cb_FastVideoRecording.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cb_FastVideoRecording.Location = new System.Drawing.Point(300, 58);
             this.cb_FastVideoRecording.Name = "cb_FastVideoRecording";
-            this.cb_FastVideoRecording.Size = new System.Drawing.Size(190, 23);
+            this.cb_FastVideoRecording.Size = new System.Drawing.Size(217, 23);
             this.cb_FastVideoRecording.TabIndex = 8;
-            this.cb_FastVideoRecording.Text = "Use fast video recording ";
+            this.cb_FastVideoRecording.Text = "Fast-Video-Recording (alpha)";
             this.cb_FastVideoRecording.UseVisualStyleBackColor = true;
             this.cb_FastVideoRecording.CheckedChanged += new System.EventHandler(this.cb_FastVideoRecording_CheckedChanged);
             // 
@@ -511,11 +512,23 @@ namespace iRacingReplayDirector
             this.newVersionMessage.Text = "New Version available ->";
             this.newVersionMessage.Visible = false;
             // 
+            // cb_UseNewSettingsDlg
+            // 
+            this.cb_UseNewSettingsDlg.AutoSize = true;
+            this.cb_UseNewSettingsDlg.Location = new System.Drawing.Point(17, 46);
+            this.cb_UseNewSettingsDlg.Name = "cb_UseNewSettingsDlg";
+            this.cb_UseNewSettingsDlg.Size = new System.Drawing.Size(238, 23);
+            this.cb_UseNewSettingsDlg.TabIndex = 40;
+            this.cb_UseNewSettingsDlg.Text = "Use New Settings Dialog (alpha)";
+            this.cb_UseNewSettingsDlg.UseVisualStyleBackColor = true;
+            this.cb_UseNewSettingsDlg.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 424);
+            this.Controls.Add(this.cb_UseNewSettingsDlg);
             this.Controls.Add(this.newVersionMessage);
             this.Controls.Add(this.configurePluginsButton);
             this.Controls.Add(this.changeVersionButton);
@@ -585,5 +598,6 @@ namespace iRacingReplayDirector
         private System.Windows.Forms.CheckBox checkBoxShutdownAfterEncode;
         private System.Windows.Forms.CheckBox cb_FastVideoRecording;
         private System.Windows.Forms.CheckBox cb_CloseiRacingAfterRecording;
+        private System.Windows.Forms.CheckBox cb_UseNewSettingsDlg;
     }
 }

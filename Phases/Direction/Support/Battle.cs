@@ -93,9 +93,11 @@ namespace iRacingReplayDirector.Phases.Direction.Support
                 Position = g.Position
             });
 
+            //get complete list of cars/drivers racing within the set limit of seconds (battlegap) to other cars 
             var r = timeGap
                 .Where(d => d.Time < battleGap.TotalSeconds);
 
+            //if prefredDriver only - then reduce the list to battles involving prefered drivers. 
             if (Settings.Default.FocusOnPreferedDriver)
                 r = r.Where(d => IsAPerferredDriver(d))
                      .OrderBy(d => d.Position);
@@ -143,7 +145,8 @@ namespace iRacingReplayDirector.Phases.Direction.Support
 
         static bool IsAPerferredDriver(GapMetric d)
         {
-            return preferredCarIdxs.Contains(d.CarIdx) || preferredCarIdxs.Contains(d.LeaderCarIdx);
+            TraceDebug.WriteLine("IsAPreferred Driver called for carIdx {0} Preferred: {1}, Leader: {2} : return: {3}", d.CarIdx, preferredCarIdxs.Contains(d.CarIdx), preferredCarIdxs.Contains(d.LeaderCarIdx), preferredCarIdxs.Contains(d.CarIdx) || preferredCarIdxs.Contains(d.LeaderCarIdx));
+            return preferredCarIdxs.Contains(d.CarIdx); /* || preferredCarIdxs.Contains(d.LeaderCarIdx);*/
         }
 
         internal static Car SelectABattle(DataSample data, IEnumerable<GapMetric> all, double dice)
